@@ -1,0 +1,23 @@
+{
+    "name": "More Calendar Timezones",
+    "description": "Display more than two timezones in your Google Calendar",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "48": "/icons/icon48.png",
+        "128": "/icons/icon128.png"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://calendar.google.com/*"],
+          "css": ["styles.css"],
+          "js": ["content-script.js"]
+        }
+      ],
+    "permissions": [
+        "storage"
+    ]
+  }
